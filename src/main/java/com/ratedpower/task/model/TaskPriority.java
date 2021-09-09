@@ -1,4 +1,4 @@
-package com.example.demo.task;
+package com.ratedpower.task.model;
 
 public enum TaskPriority {
     LOW,
