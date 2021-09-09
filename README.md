@@ -28,3 +28,11 @@ Develop the necessary functionalities for the application to be able to perform 
     - Filter results by priority and/or completion.
     
 2. Create a new entity called *SubtaskEntity* that allows one task to have multiple subtasks.
+
+
+## Solution Implemented
+1. Rest Controller for Rest API, could have used to use spring data rest and simplify restcontroller and service.
+2. Unit and integrated tests.
+3. Builded with Github Actions and pushed image to docker hub.
+4. Postman collection aggregated.
+5. Deployed on my on-premises server by Helm Release using fluxCD. `https://ratedpower.lavandadelpatio.es/tasks`

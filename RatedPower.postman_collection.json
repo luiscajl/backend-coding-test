@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "d310759f-ed2f-4688-bd1a-1f4dd1b31f2b",
+		"name": "RatedPower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ratedpower.lavandadelpatio.es/tasks/2",
+					"protocol": "https",
+					"host": [
+						"ratedpower",
+						"lavandadelpatio",
+						"es"
+					],
+					"path": [
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://ratedpower.lavandadelpatio.es/tasks?sort=priority,desc",
+					"protocol": "https",
+					"host": [
+						"ratedpower",
+						"lavandadelpatio",
+						"es"
+					],
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createdDate",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "priority,desc"
+						},
+						{
+							"key": "completed",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "priority",
+							"value": "MEDIUM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"description\": \"Task description\",\n    \"priority\": \"LOW\",\n    \"subtasks\": [\n        {\n            \"id\": 1,\n            \"description\": \"Subtask 1 description\",\n            \"completed\": true,\n            \"priority\": \"HIGH\"\n        },\n        {\n            \"id\": 2,\n            \"description\": \"Subtask 2 description\",\n            \"completed\": false,\n            \"priority\": \"MEDIUM\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ratedpower.lavandadelpatio.es/tasks",
+					"protocol": "https",
+					"host": [
+						"ratedpower",
+						"lavandadelpatio",
+						"es"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"description\": \"Task description\",\n    \"priority\": \"LOW\",\n    \"subtasks\": [\n        {\n            \"id\": 1,\n            \"description\": \"Subtask 1 description\",\n            \"completed\": true,\n            \"priority\": \"HIGH\"\n        },\n        {\n            \"id\": 2,\n            \"description\": \"Subtask 2 description\",\n            \"completed\": true,\n            \"priority\": \"MEDIUM\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ratedpower.lavandadelpatio.es/tasks/2",
+					"protocol": "https",
+					"host": [
+						"ratedpower",
+						"lavandadelpatio",
+						"es"
+					],
+					"path": [
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ratedpower.lavandadelpatio.es/tasks/2",
+					"protocol": "https",
+					"host": [
+						"ratedpower",
+						"lavandadelpatio",
+						"es"
+					],
+					"path": [
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
